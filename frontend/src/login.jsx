@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
 import './index.css';
-import {dotenv} from 'dotenv'
-dotenv.config()
 
 function Login() {
   const [formData, setFormData] = useState({
