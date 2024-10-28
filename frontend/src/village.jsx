@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import {dotenv} from 'dotenv'
-dotenv.config()
 function Village() {
   const { villageId } = useParams(); // Get villageId from URL
   const [villageData, setVillageData] = useState(null);
