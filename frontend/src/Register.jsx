@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
+import {dotenv} from 'dotenv';
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ function Register() {
     setError(null);
 
     try {
-      const response = await fetch("http://localhost:7000/api/register", {
+      const response = await fetch('${process.env.BACKEND_URL}/api/register', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
