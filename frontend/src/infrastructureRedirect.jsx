@@ -19,7 +19,7 @@ const VillageRedirect = () => {
 
     const fetchPincode = async () => {
       try {
-        const response = await fetch(`${process.env.BACKEND_URL/getPincodeByEmail/${email}`, {
+        const response = await fetch(`${process.env.BACKEND_URL}/getPincodeByEmail/${email}`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`,
