@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import {dotenv} from 'dotenv'
+dotenv.config()
 function Village() {
   const { villageId } = useParams(); // Get villageId from URL
   const [villageData, setVillageData] = useState(null);
@@ -18,7 +19,7 @@ function Village() {
 
     const fetchVillage = async () => {
       try {
-        const response = await fetch(`http://localhost:7000/api/village/${villageId}`, {
+        const response = await fetch(`${process.env.BACKEND_URL}/api/village/${villageId}`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`, // Added Bearer prefix
