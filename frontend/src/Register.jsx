@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
 import {dotenv} from 'dotenv';
+dotenv.config();
 
 function Register() {
   const [formData, setFormData] = useState({
