@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { jwtDecode } from 'jwt-decode';
-import {dotenv} from 'dotenv'
-dotenv.config()
 
 const VillageRedirect = () => {
   const navigate = useNavigate();
@@ -19,7 +17,7 @@ const VillageRedirect = () => {
 
     const fetchPincode = async () => {
       try {
-        const response = await fetch(`${process.env.BACKEND_URL}/api/getPincodeByEmail/${email}`, {
+        const response = await fetch(`http://localhost:7000/api/getPincodeByEmail/${email}`, {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`,

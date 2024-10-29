@@ -22,7 +22,7 @@ function Login() {
     setSuccess(false);
     
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/api/login`, {
+      const response = await fetch("http://localhost:7000/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

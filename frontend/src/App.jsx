@@ -8,6 +8,9 @@ import Village from './village';
 import VillageRedirect from  './VillageRedirect';
 import VerifyOtp from './verify-otp';
 import Infrastructure from './infrastructure';
+import IncidentReport from './incidentReport';
+import Services from './service';
+import Service1 from './service1';
 
 function App() {
   return (
@@ -19,6 +22,11 @@ function App() {
       <Route path="/villageRedirect" element={<VillageRedirect />} /> {/* Add the redirect route */}
       <Route path="/verify-otp" element={<VerifyOtp />} />
       <Route path="/infrastructure" element={<Infrastructure />} />
+      <Route path="/incident" element={<IncidentReport />} />
+      <Route path="/verify-otp" element={<VerifyOtp />} />
+      <Route path="/service" element={<Services />} />
+      <Route path="/services/1" element={<Service1 />} />
+
     </Routes>
   );
 }

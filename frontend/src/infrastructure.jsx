@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Papa from 'papaparse';
+import './infra.css';
 
 function Infrastructure() {
   const [data, setData] = useState([]);
@@ -33,11 +34,11 @@ function Infrastructure() {
 
   return (
     <div className="App">
-      <h1>Facilities in Block: {block}</h1>
-
+      <h1 className="text-center text-primary">Facilities in Block: {block}</h1>
+  
       {filteredData.length > 0 ? (
-        <table border="1">
-          <thead>
+        <table className="table table-bordered table-striped mt-4">
+          <thead className="thead-dark">
             <tr>
               {Object.keys(filteredData[0]).map((header) => (
                 <th key={header}>{header}</th>
@@ -55,7 +56,7 @@ function Infrastructure() {
           </tbody>
         </table>
       ) : (
-        <p>No data found for the specified block.</p>
+        <p className="text-center text-muted">No data found for the specified block.</p>
       )}
     </div>
   );

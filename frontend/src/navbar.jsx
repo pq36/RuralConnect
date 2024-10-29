@@ -3,7 +3,7 @@ import './index.css'
 function Navbar(){
     return (
         <div className="flex flex-wrap justify-evenly items-center py-4 px-6 bg-green-600 shadow-lg rounded-lg border border-green-700 md:flex-row md:space-x-6 space-y-4 md:space-y-0">
-          <a href="#" className="text-white px-4 py-2 rounded-md hover:bg-green-700 hover:text-gray-100 transition-all duration-300">
+          <a href="/service" className="text-white px-4 py-2 rounded-md hover:bg-green-700 hover:text-gray-100 transition-all duration-300">
             Services
           </a>
           <a href="/villageRedirect" className="text-white px-4 py-2 rounded-md hover:bg-green-700 hover:text-gray-100 transition-all duration-300">
@@ -12,7 +12,7 @@ function Navbar(){
           <a href="/infrastructure" className="text-white px-4 py-2 rounded-md hover:bg-green-700 hover:text-gray-100 transition-all duration-300">
             Resources
           </a>
-          <a href="#" className="text-white px-4 py-2 rounded-md hover:bg-green-700 hover:text-gray-100 transition-all duration-300">
+          <a href="/incident" className="text-white px-4 py-2 rounded-md hover:bg-green-700 hover:text-gray-100 transition-all duration-300">
             Incidents
           </a>
           <a href="#" className="text-white px-4 py-2 rounded-md hover:bg-green-700 hover:text-gray-100 transition-all duration-300">
